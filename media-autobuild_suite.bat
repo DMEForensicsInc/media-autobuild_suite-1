@@ -113,7 +113,7 @@ set ffmpeg_options_builtin=--disable-autodetect amf bzlib cuda cuvid d3d11va dxv
 iconv lzma nvenc schannel zlib sdl2 ffnvcodec nvdec cuda-llvm
 
 :: common external libs
-set ffmpeg_options_basic=gmp libmp3lame libopus libvorbis libvpx libx264 libx265 ^
+set ffmpeg_options_basic=gmp libmp3lame libopus libvorbis libvpx libx264 libx265 libopenjpeg ^
 libdav1d libaom --disable-debug libfdk-aac
 
 :: options used in zeranoe builds and not present above
