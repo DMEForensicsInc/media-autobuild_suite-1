@@ -53,19 +53,6 @@ if not exist %instdir% (
     exit
 )
 
-if not ["%instdir:~32,1%"]==[""] (
-    echo -------------------------------------------------------------------------------
-    echo. The total filepath to the suite seems too large (larger than 32 characters^):
-    echo. %instdir%
-    echo. Some packages might fail building because of it.
-    echo. Please move the suite directory closer to the root of your drive and maybe
-    echo. rename the suite directory to a smaller name. Examples:
-    echo. Avoid:  C:\Users\Administrator\Desktop\testing\media-autobuild_suite-master
-    echo. Prefer: C:\media-autobuild_suite
-    echo. Prefer: C:\ab-suite
-    pause
-)
-
 for /f "usebackq tokens=*" %%f in (`powershell -noprofile -command $PSVersionTable.PSVersion.Major`) ^
 do if %%f lss 4 (
     echo ----------------------------------------------------------------------
